@@ -2,23 +2,25 @@ var makingSense = (function() {
 
     var writeLines, valueDivisibleBy;
 
-    writeLines = function() {
+    writeLines = function(firstWord, secondWord) {
+
+        var div = document.getElementById("making_sense");
 
         for(let x=1; x<=100; x++) {
             if(valueDivisibleBy(x, 5) && valueDivisibleBy(x, 3))
-                document.getElementById("making_sense").innerHTML += "Making Sense";
+                div.innerHTML += firstWord + " " + secondWord;
             else if(valueDivisibleBy(x, 5))
-                document.getElementById("making_sense").innerHTML += "Making";
+                div.innerHTML += firstWord;
             else if(valueDivisibleBy(x, 3))
-                document.getElementById("making_sense").innerHTML += "Sense";
+                div.innerHTML += secondWord;
             else
-                document.getElementById("making_sense").innerHTML += x;
+                div.innerHTML += x;
 
-            document.getElementById("making_sense").innerHTML += "<br />";
+            div.innerHTML += "<br />";
         }
     };
 
-    valueDivisibleBy = function(value,  divisibleBy) {
+    valueDivisibleBy = function(value, divisibleBy) {
         return (value % divisibleBy) == 0;
     };
 
