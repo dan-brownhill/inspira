@@ -3,16 +3,8 @@
     <body>
         <div id="making_sense"></div>
     </body>
-    <script type="text/javascript">
-        for(let x=1; x<=100; x++) {
-            if((x % 5) == 0 && (x % 3) == 0)
-                document.getElementById("making_sense").innerHTML += "Making Sense<br />";
-            else if((x % 5) == 0)
-                document.getElementById("making_sense").innerHTML += "Making<br />";
-            else if((x % 3) == 0)
-                document.getElementById("making_sense").innerHTML += "Sense<br />";
-            else
-                document.getElementById("making_sense").innerHTML += x+"<br />";
-        }
+    <script src="js/main.js"></script>
+    <script>
+        makingSense.writeLines("Making", "Sense");
     </script>
 </html>
